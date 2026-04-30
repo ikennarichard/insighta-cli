@@ -24,12 +24,25 @@ cd insighta-cli
 go install .
 ```
 
-**Step 4 — Verify installation:**
+
+Then make sure `$GOPATH/bin` is in your PATH. Add this to your `~/.bashrc` or `~/.zshrc`:
 ```bash
-insighta --help
+export PATH=$PATH:$(go env GOPATH)/bin
 ```
 
----
+Reload your shell:
+
+```bash
+echo $SHELL
+ # if you see this /usr/bin/bash  use  this source ~/.bashrc
+source ~/.zshrc  
+```
+
+**Step 4 — Verify installation:**
+```bash
+ls $(go env GOPATH)/bin # use the option u see in the folder (insighta-cli or insighta)
+insighta --help # or insighta-cli --help
+```
 
 ## Authentication
 

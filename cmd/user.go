@@ -3,7 +3,6 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 
 	"github.com/ikennarichard/insighta-cli/internal/api"
 	"github.com/spf13/cobra"
@@ -25,15 +24,11 @@ func runWhoami(cmd *cobra.Command, args []string) error {
 
     resp, err := client.Get("/api/v1/users/me")
     if err != nil {
-        fmt.Println("Error", err)
         fmt.Println("Failed")
         return err
     }
     defer resp.Body.Close()
 // Read raw body first
-    body, _ := io.ReadAll(resp.Body)
-    fmt.Printf("Status: %d\nBody: %s\n", resp.StatusCode, string(body))
-    
     var result struct {
         Data struct {
             Username string `json:"username"`

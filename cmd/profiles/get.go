@@ -52,6 +52,12 @@ func runGet(cmd *cobra.Command, args []string) error {
 
 	p := result.Data
 
+	countryDisplay := display.OrDash(p.CountryName)
+if p.CountryID != "" && p.CountryName != "" {
+    countryDisplay = fmt.Sprintf("%s (%s)", p.CountryName, p.CountryID)
+}
+
+
 	// Display as key-value pairs
 	rows := [][]string{
 		{"ID", p.ID},
@@ -60,7 +66,7 @@ func runGet(cmd *cobra.Command, args []string) error {
 		{"Gender Probability", display.FormatProbability(p.GenderProbability)},
 		{"Age", fmt.Sprintf("%d", p.Age)},
 		{"Age Group", display.OrDash(p.AgeGroup)},
-		{"Country", display.OrDash(p.CountryName)},
+		{"Country", countryDisplay},
 		{"Country Code", display.OrDash(p.CountryID)},
 		{"Country Probability", display.FormatProbability(p.CountryProbability)},
 		{"Created At", p.CreatedAt},

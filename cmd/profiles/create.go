@@ -1,4 +1,3 @@
-// cmd/profiles/create.go
 package profiles
 
 import (

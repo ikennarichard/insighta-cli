@@ -45,12 +45,12 @@ var (
 var listCmd = &cobra.Command{
     Use:   "list",
     Short: "List profiles with optional filters",
-    Example: `  insighta profiles list
-  insighta profiles list --gender male
-  insighta profiles list --country NG --age-group adult
-  insighta profiles list --min-age 25 --max-age 40
-  insighta profiles list --sort-by age --order desc
-  insighta profiles list --page 2 --limit 20`,
+    Example: `  insighta-cli profiles list
+  insighta-cli profiles list --gender male
+  insighta-cli profiles list --country NG --age-group adult
+  insighta-cli profiles list --min-age 25 --max-age 40
+  insighta-cli profiles list --sort-by age --order desc
+  insighta-cli profiles list --page 2 --limit 20`,
     RunE: runList,
 }
 

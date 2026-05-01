@@ -46,7 +46,7 @@ func Execute() {
 
 func init() {
     // Global flags
-    rootCmd.PersistentFlags().StringVar(&BaseURL, "api-url", "http://127.0.0.1:8080", "Backend API base URL")
+    rootCmd.PersistentFlags().StringVar(&BaseURL, "api-url", "http://genderize-plum.vercel.app", "Backend API base URL")
 
     // Add commands
     rootCmd.AddCommand(loginCmd)

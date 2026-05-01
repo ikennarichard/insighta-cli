@@ -1,4 +1,3 @@
-// cmd/whoami.go
 package cmd
 
 import (
@@ -23,13 +22,13 @@ func runWhoami(cmd *cobra.Command, args []string) error {
 
     fmt.Print("Fetching user info... ")
 
-    resp, err := client.Get("/api/v1/me")
+    resp, err := client.Get("/api/v1/users/me")
     if err != nil {
         fmt.Println("Failed")
         return err
     }
     defer resp.Body.Close()
-
+// Read raw body first
     var result struct {
         Data struct {
             Username string `json:"username"`
@@ -45,7 +44,6 @@ func runWhoami(cmd *cobra.Command, args []string) error {
 
     u := result.Data
 
-    fmt.Println("✓ Done\n")
     fmt.Println("=== Logged in as ===")
     fmt.Printf("Username : @%s\n", u.Username)
     fmt.Printf("Email    : %s\n", u.Email)

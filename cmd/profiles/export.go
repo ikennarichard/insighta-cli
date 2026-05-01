@@ -23,8 +23,8 @@ var (
 var exportCmd = &cobra.Command{
 	Use:   "export",
 	Short: "Export profiles to a file",
-	Example: `  insighta profiles export --format csv
-  insighta profiles export --format csv --gender male --country NG`,
+	Example: `  insighta-cli profiles export --format csv
+  insighta-cli profiles export --format csv --gender male --country NG`,
 	RunE: runExport,
 }
 

@@ -41,7 +41,7 @@ source ~/.zshrc
 **Step 4 — Verify installation:**
 ```bash
 ls $(go env GOPATH)/bin # use the option u see in the folder (insighta-cli or insighta)
-insighta-cli --help # or insighta-cli --help
+insighta-cli --help # or insighta --help
 ```
 
 ## Authentication

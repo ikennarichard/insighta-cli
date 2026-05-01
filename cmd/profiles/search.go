@@ -17,7 +17,7 @@ var searchCmd = &cobra.Command{
 	Use:     "search <query>",
 	Short:   "Search profiles using natural language",
 	Args:    cobra.ExactArgs(1),
-	Example: `  insighta profiles search "young males from nigeria"`,
+	Example: `  insighta-cli profiles search "young males from nigeria"`,
 	RunE:    runSearch,
 }
 

@@ -13,8 +13,8 @@ import (
 )
 
 var (
-    ErrNotLoggedIn    = errors.New("not logged in — run: insighta login")
-    ErrSessionExpired = errors.New("session expired — run: insighta login")
+    ErrNotLoggedIn    = errors.New("not logged in — run: insighta-cli login")
+    ErrSessionExpired = errors.New("session expired — run: insighta-cli login")
     ErrForbidden      = errors.New("you do not have permission to perform this action")
     ErrNotFound       = errors.New("resource not found")
     ErrServerError    = errors.New("server error — please try again later")

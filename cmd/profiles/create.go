@@ -17,7 +17,7 @@ var flagName string
 var createCmd = &cobra.Command{
 	Use:     "create",
 	Short:   "Create a new profile",
-	Example: `  insighta profiles create --name "Harriet Tubman"`,
+	Example: `  insighta-cli profiles create --name "Harriet Tubman"`,
 	RunE:    runCreate,
 }
 

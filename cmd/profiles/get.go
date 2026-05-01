@@ -16,7 +16,7 @@ var getCmd = &cobra.Command{
 	Use:     "get <id>",
 	Short:   "Get a profile by ID",
 	Args:    cobra.ExactArgs(1), // enforces exactly one argument
-	Example: "  insighta profiles get abc-123-def",
+	Example: "  insighta-cli profiles get abc-123-def",
 	RunE:    runGet,
 }
 

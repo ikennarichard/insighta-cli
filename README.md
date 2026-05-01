@@ -41,26 +41,26 @@ source ~/.zshrc
 **Step 4 — Verify installation:**
 ```bash
 ls $(go env GOPATH)/bin # use the option u see in the folder (insighta-cli or insighta)
-insighta --help # or insighta-cli --help
+insighta-cli --help # or insighta-cli --help
 ```
 
 ## Authentication
 
 **Login:**
 ```bash
-insighta login
+insighta-cli login
 ```
 This opens GitHub in your browser. After authenticating, the CLI saves
 your credentials to `~/.insighta/credentials.json` automatically.
 
 **Check who you are:**
 ```bash
-insighta whoami
+insighta-cli whoami
 ```
 
 **Logout:**
 ```bash
-insighta logout
+insight-cli logout
 ```
 
 ---
@@ -69,46 +69,46 @@ insighta logout
 
 **List all profiles:**
 ```bash
-insighta profiles list
+insighta-cli profiles list
 ```
 
 **Filter profiles:**
 ```bash
-insighta profiles list --gender male
-insighta profiles list --country NG
-insighta profiles list --age-group adult
-insighta profiles list --min-age 25 --max-age 40
+insighta-cli profiles list --gender male
+insighta-cli profiles list --country NG
+insighta-cli profiles list --age-group adult
+insighta-cli profiles list --min-age 25 --max-age 40
 ```
 
 **Sort profiles:**
 ```bash
-insighta profiles list --sort-by age --order desc
+insighta-cli profiles list --sort-by age --order desc
 ```
 
 **Paginate:**
 ```bash
-insighta profiles list --page 2 --limit 20
+insighta-cli profiles list --page 2 --limit 20
 ```
 
 **Get a single profile:**
 ```bash
-insighta profiles get <id>
+insighta-cli profiles get <id>
 ```
 
 **Search using natural language:**
 ```bash
-insighta profiles search "young males from nigeria"
+insighta-cli profiles search "young males from nigeria"
 ```
 
 **Create a profile:**
 ```bash
-insighta profiles create --name "Harriet Tubman"
+insighta-cli profiles create --name "Harriet Tubman"
 ```
 
 **Export to CSV:**
 ```bash
-insighta profiles export --format csv
-insighta profiles export --format csv --gender male --country NG
+insighta-cli profiles export --format csv
+insighta-cli profiles export --format csv --gender male --country NG
 ```
 The CSV file is saved to your current working directory.
 

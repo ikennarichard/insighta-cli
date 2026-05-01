@@ -80,7 +80,7 @@ func runLogin(cmd *cobra.Command, args []string) error {
     params.Set("code_verifier", codeVerifier)
     params.Set("redirect_uri", redirectURI)
 
-    loginURL := fmt.Sprintf("%s/auth/github/login?%s", BaseURL, params.Encode())
+    loginURL := fmt.Sprintf("%s/auth/github?%s", BaseURL, params.Encode())
 
     fmt.Println("Opening GitHub login in your browser...")
     openBrowser(loginURL)
